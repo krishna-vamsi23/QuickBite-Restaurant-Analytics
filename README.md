@@ -365,7 +365,9 @@ The dashboards enable restaurant management to:
 
 # Conclusion
 
-This project demonstrates an end-to-end Business Intelligence workflow starting from SQL database creation and data preparation to interactive dashboard development in Power BI.
+## Conclusion
 
-The project showcases practical skills in SQL, data modeling, DAX, business analytics, and dashboard design, making it suitable for Data Analyst portfolio presentations.
+This project demonstrates an end-to-end Business Intelligence solution, beginning with data cleaning and preparation in **Python (Pandas)**, followed by database design and querying in **SQL Server**, and concluding with interactive dashboard development in **Power BI** using **DAX**.
+
+The project highlights practical experience in **Python, Pandas, SQL, ETL, data modeling, DAX, data visualization, and business intelligence**, showcasing the complete analytics workflow expected of a Data Analyst.
 
