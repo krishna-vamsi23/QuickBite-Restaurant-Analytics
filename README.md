@@ -204,7 +204,15 @@ Snap of Product Analysis Dashboard,
 
 Snap of Store Performance Dashboard,
 
+# Store Performance Dashboard
+
+![Store_Performance_Dashboard](Store_Performance.png)
+
 Snap of Customer Analysis Dashboard,
+
+# Customer Analysis Dashboard
+
+![Customer_Analysis_Dashboard](Customer_Analysis.png)
 
 
 
