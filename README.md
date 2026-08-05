@@ -198,6 +198,10 @@ Snap of Executive Dashboard,
 
 Snap of Product Analysis Dashboard,
 
+# Product Analysis Dashboard
+
+![Product_Analysis_Dashboard](Product_Analysis.png)
+
 Snap of Store Performance Dashboard,
 
 Snap of Customer Analysis Dashboard,
