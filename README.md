@@ -1,78 +1,337 @@
+
 # 🍔 QuickBite Restaurant Analytics Dashboard
 
-## Project Overview
 
-This project analyzes restaurant operations using SQL Server and Power BI.
+## Problem Statement
 
-The dashboard provides insights into:
 
-- Sales Performance
-- Product Analysis
-- Store Performance
-- Customer Analysis
+This project demonstrates an end-to-end Business Intelligence solution for a restaurant chain using **SQL Server**, **Power BI**, and **DAX**.
 
----
+The objective of this project is to analyze restaurant operations by providing insights into sales, products, stores, and customers through interactive dashboards.
 
-## Tools Used
+The solution helps business users answer questions such as:
 
-- SQL Server
-- Microsoft SQL Server Management Studio
+- Which products generate the highest revenue?
+- Which store performs the best?
+- Who are the most valuable customers?
+- How do sales change over time?
+- Which product categories contribute the most to revenue?
+
+# 🛠 Tools Used
+
+- Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
 - Power BI Desktop
-- DAX
+- DAX (Data Analysis Expressions)
+- Git & GitHub
 
----
+# Database Design
 
-## Dataset
-
-The dataset contains:
+A relational SQL Server database was designed consisting of six tables.
 
 - Customers
 - Orders
 - OrderItems
 - Products
-- Employees
 - Stores
+- Employees
+
+Primary Keys and Foreign Keys were implemented to build relationships between the tables before importing the data into Power BI.
+
+# Project Workflow
+
+### Step 1
+
+Created a SQL Server database named **QuickBite**.
 
 ---
 
-## Dashboards
+### Step 2
 
-### Executive Dashboard
+Imported CSV datasets into SQL Server.
+
+The following tables were created:
+
+- Customers
+- Employees
+- Stores
+- Products
+- Orders
+- OrderItems
+
+---
+
+### Step 3
+
+Defined appropriate data types for each column.
+
+Examples:
+
+- nvarchar
+- int
+- float
+- datetime2
+- date
+- tinyint
+
+---
+
+### Step 4
+
+Verified data quality.
+
+- Checked row counts
+- Validated primary keys
+- Removed datatype issues
+- Corrected Quantity datatype
+
+---
+
+### Step 5
+
+Created SQL queries for business analysis.
+
+Some examples include:
 
 - Total Revenue
 - Total Orders
 - Total Customers
-- Monthly Revenue Trend
-
-### Product Analysis
-
-- Top Products
-- Revenue by Category
-- Products Sold
-- Product Revenue Distribution
-
-### Store Performance
-
 - Revenue by Store
-- Orders by Store
-- Monthly Revenue
-- Revenue Share
-
-### Customer Analysis
-
-- Customer Distribution
-- Loyalty Members
-- Revenue by Customer
-- Registration Trend
+- Revenue by Product
+- Top Selling Products
+- Monthly Revenue Trend
+- Category Performance
+- Customer Analysis
 
 ---
 
-## Skills Demonstrated
+### Step 6
 
-- SQL Queries
+Imported SQL Server tables into Power BI Desktop.
+
+---
+
+### Step 7
+
+Created relationships between the tables.
+
+Relationships include:
+
+- Customers → Orders
+- Stores → Orders
+- Employees → Orders
+- Products → OrderItems
+- Orders → OrderItems
+
+A star schema model was used for reporting.
+
+---
+
+### Step 8
+
+Created DAX Measures.
+
+Examples include:
+
+```DAX
+Total Revenue =
+SUM(Orders[TotalAmount])
+```
+
+```DAX
+Total Orders =
+COUNT(Orders[OrderID])
+```
+
+```DAX
+Total Customers =
+DISTINCTCOUNT(Orders[CustomerID])
+```
+
+```DAX
+Products Sold =
+SUM(OrderItems[Quantity])
+```
+
+```DAX
+Average Order Value =
+DIVIDE([Total Revenue],[Total Orders])
+```
+
+Additional measures were created for:
+
+- Product Revenue
+- Average Selling Price
+- Loyalty Percentage
+- Store Revenue
+- Customer Revenue
+
+---
+
+### Step 9
+
+Built four interactive dashboards.
+
+Snap of Executive Dashboard,
+
+Snap of Product Analysis Dashboard,
+
+Snap of Store Performance Dashboard,
+
+Snap of Customer Analysis Dashboard,
+
+
+
+# Dashboard Pages
+
+## 1️⃣ Executive Dashboard
+
+KPIs
+
+- Total Revenue
+- Total Orders
+- Total Customers
+- Total Products Sold
+- Average Order Value
+
+Visualizations
+
+- Monthly Revenue Trend
+- Revenue by Store
+- Revenue by Category
+
+Slicers
+
+- Store
+- Order Date
+
+---
+
+## 2️⃣ Product Analysis Dashboard
+
+KPIs
+
+- Product Revenue
+- Products Sold
+- Average Selling Price
+
+Visualizations
+
+- Top 10 Products by Revenue
+- Revenue by Category
+- Products Sold by Category
+- Product Revenue Treemap
+
+Slicers
+
+- Category
+- Product Name
+
+---
+
+## 3️⃣ Store Performance Dashboard
+
+KPIs
+
+- Store Revenue
+- Total Orders
+- Total Customers
+- Total Stores
+
+Visualizations
+
+- Revenue by Store
+- Orders by Store
+- Monthly Revenue Trend
+- Revenue Share by Store
+
+Slicers
+
+- Store
+- Order Date
+
+---
+
+## 4️⃣ Customer Analysis Dashboard
+
+KPIs
+
+- Total Customers
+- Loyalty Members
+- Loyalty Percentage
+- Customer Revenue
+
+Visualizations
+
+- Top Customers
+- Customers by City
+- Gender Distribution
+- Customer Registration Trend
+- Revenue by Loyalty Status
+
+Slicers
+
+- City
+- Gender
+
+
+# Skills Demonstrated
+
+## SQL
+
+- Database Design
+- Primary & Foreign Keys
+- Joins
+- Aggregations
+- GROUP BY
+- ORDER BY
+- CASE Statements
+- Business Queries
+
+---
+
+## Power BI
+
 - Data Modeling
-- DAX Measures
+- Relationships
 - Interactive Dashboards
-- Business Intelligence
-- Data Visualization
+- Drill-down Analysis
+- Slicers
+- Cross Filtering
+- Themes
+- Report Navigation
+
+---
+
+## DAX
+
+- SUM
+- COUNT
+- DISTINCTCOUNT
+- SUMX
+- DIVIDE
+- AVERAGE
+- CALCULATE
+- RELATED
+
+---
+
+# Business Insights
+
+The dashboards enable restaurant management to:
+
+- Monitor overall sales performance.
+- Identify high-performing products.
+- Compare store performance.
+- Track customer loyalty.
+- Analyze purchasing trends.
+- Understand category-wise revenue contribution.
+- Identify top revenue-generating customers.
+
+
+# Conclusion
+
+This project demonstrates an end-to-end Business Intelligence workflow starting from SQL database creation and data preparation to interactive dashboard development in Power BI.
+
+The project showcases practical skills in SQL, data modeling, DAX, business analytics, and dashboard design, making it suitable for Data Analyst portfolio presentations.
 
