@@ -194,7 +194,7 @@ Snap of Executive Dashboard,
 
 # Executive Dashboard
 
-![Executive Dashboard](Screenshots/Executive_Dashboard.png)
+![Executive Dashboard](Executive_Dashboard.png)
 
 Snap of Product Analysis Dashboard,
 
