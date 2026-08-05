@@ -17,13 +17,17 @@ The solution helps business users answer questions such as:
 - How do sales change over time?
 - Which product categories contribute the most to revenue?
 
-# 🛠 Tools Used
+## 🛠 Tools & Technologies Used
 
-- Microsoft SQL Server
+- Python
+- Pandas
+- SQL Server
 - SQL Server Management Studio (SSMS)
 - Power BI Desktop
-- DAX (Data Analysis Expressions)
-- Git & GitHub
+- DAX
+- Git
+- GitHub
+- Visual Studio Code
 
 # Database Design
 
@@ -42,11 +46,25 @@ Primary Keys and Foreign Keys were implemented to build relationships between th
 
 ### Step 1
 
+Loaded the raw CSV datasets into Python using Pandas.
+
+Performed data preparation tasks, including:
+
+- Reading CSV files
+- Inspecting the data
+- Handling missing values
+- Validating data types
+- Preparing datasets for SQL Server import
+
+The cleaned datasets were then exported for loading into SQL Server.
+
+### Step 2
+
 Created a SQL Server database named **QuickBite**.
 
 ---
 
-### Step 2
+### Step 3
 
 Imported CSV datasets into SQL Server.
 
@@ -61,7 +79,7 @@ The following tables were created:
 
 ---
 
-### Step 3
+### Step 4
 
 Defined appropriate data types for each column.
 
@@ -76,7 +94,7 @@ Examples:
 
 ---
 
-### Step 4
+### Step 5
 
 Verified data quality.
 
@@ -87,7 +105,7 @@ Verified data quality.
 
 ---
 
-### Step 5
+### Step 6
 
 Created SQL queries for business analysis.
 
@@ -105,13 +123,13 @@ Some examples include:
 
 ---
 
-### Step 6
+### Step 7
 
 Imported SQL Server tables into Power BI Desktop.
 
 ---
 
-### Step 7
+### Step 8
 
 Created relationships between the tables.
 
@@ -127,7 +145,7 @@ A star schema model was used for reporting.
 
 ---
 
-### Step 8
+### Step 9
 
 Created DAX Measures.
 
@@ -168,7 +186,7 @@ Additional measures were created for:
 
 ---
 
-### Step 9
+### Step 10
 
 Built four interactive dashboards.
 
