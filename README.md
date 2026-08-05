@@ -192,6 +192,10 @@ Built four interactive dashboards.
 
 Snap of Executive Dashboard,
 
+# Executive Dashboard
+
+![Executive Dashboard](Screenshots/Executive_Dashboard.png)
+
 Snap of Product Analysis Dashboard,
 
 Snap of Store Performance Dashboard,
