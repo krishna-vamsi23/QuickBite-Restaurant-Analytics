@@ -221,19 +221,19 @@ Built four interactive dashboards in Power BI.
 
 ## Product Analysis Dashboard
 
-![Product Analysis](Product_Analysis.png)
+![Product Analysis](Screenshots/Product_Analysis.png)
 
 ---
 
 ## Store Performance Dashboard
 
-![Store Performance](Store_Performance.png)
+![Store Performance](Screenshots/Store_Performance.png)
 
 ---
 
 ## Customer Analysis Dashboard
 
-![Customer Analysis](Customer_Analysis.png)
+![Customer Analysis](Screenshots/Customer_Analysis.png)
 
 ---
 
