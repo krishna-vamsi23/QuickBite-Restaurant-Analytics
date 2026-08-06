@@ -62,7 +62,7 @@ The Python scripts used to generate the QuickBite dataset are available in the *
 
 - [generate_Customers.py](04_Python/generate_Customers.py)
 - [generate_employees.py](04_Python/generate_employees.py)
-- [generate_orders.py](04_Python/generate_orders.py)
+- [genrate_orders.py](04_Python/genrate_orders.py)
 - [generate_orderitems.py](04_Python/generate_orderitems.py)
 - [Update_order_totals.py](04_Python/Update_order_totals.py)
 
