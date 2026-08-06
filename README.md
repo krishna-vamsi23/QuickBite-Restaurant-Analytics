@@ -138,6 +138,8 @@ Examples include:
 - Top Customers
 - Product Performance
 
+## 📂 SQL Scripts
+
 ---
 
 ### Step 7
