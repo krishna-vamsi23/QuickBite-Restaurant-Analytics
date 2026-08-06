@@ -162,6 +162,9 @@ A star schema model was used for reporting.
 
 ### Step 9
 
+<details>
+<summary>📊 View DAX Measures</summary>
+
 Created DAX Measures.
 
 Examples include:
@@ -190,7 +193,8 @@ SUM(OrderItems[Quantity])
 Average Order Value =
 DIVIDE([Total Revenue],[Total Orders])
 ```
-
+<details>
+  
 Additional measures were created for:
 
 - Product Revenue
