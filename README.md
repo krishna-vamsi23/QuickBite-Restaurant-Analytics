@@ -60,12 +60,10 @@ The dataset includes realistic information for:
 
 The Python scripts used to generate the QuickBite dataset are available in the **Python** folder.
 
-- [generate_Customers.py](04_Python/generate_Customers.py)
-- [products.py](Python/products.py)
-- [stores.py](Python/stores.py)
-- [employees.py](Python/employees.py)
-- [orders.py](Python/orders.py)
-- [orderitems.py](Python/orderitems.py)
+- [generate_Customers.py](04%20Python/generate_Customers.py)
+- [generate_employees.py](04_Python/generate_employees.py)
+- [generate_orders.py](04_Python/generate_orders.py)
+- [generate_orderitems.py](04_Python/generate_orderitems.py)
 
 Python was used to:
 
