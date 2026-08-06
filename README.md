@@ -1,26 +1,20 @@
-
 # 🍔 QuickBite Restaurant Analytics Dashboard
-
 
 ## Problem Statement
 
+This project demonstrates an end-to-end Business Intelligence solution for a restaurant chain using **Python, SQL Server, Power BI, and DAX**.
 
-This project demonstrates an end-to-end Business Intelligence solution for a restaurant chain using **SQL Server**, **Power BI**, and **DAX**.
+The objective of this project is to analyze restaurant operations by transforming raw business data into meaningful insights through interactive dashboards.
 
-The objective of this project is to analyze restaurant operations by providing insights into sales, products, stores, and customers through interactive dashboards.
+The dashboard enables restaurant management to monitor sales performance, compare store performance, analyze customer behavior, evaluate product sales, and identify business trends for better decision-making.
 
-The solution helps business users answer questions such as:
+---
 
-- Which products generate the highest revenue?
-- Which store performs the best?
-- Who are the most valuable customers?
-- How do sales change over time?
-- Which product categories contribute the most to revenue?
-
-## 🛠 Tools & Technologies Used
+# 🛠 Tools & Technologies Used
 
 - Python
 - Pandas
+- Faker
 - SQL Server
 - SQL Server Management Studio (SSMS)
 - Power BI Desktop
@@ -28,6 +22,8 @@ The solution helps business users answer questions such as:
 - Git
 - GitHub
 - Visual Studio Code
+
+---
 
 # Database Design
 
@@ -40,38 +36,43 @@ A relational SQL Server database was designed consisting of six tables.
 - Stores
 - Employees
 
-Primary Keys and Foreign Keys were implemented to build relationships between the tables before importing the data into Power BI.
+Primary Keys and Foreign Keys were implemented to establish relationships between the tables before importing them into Power BI.
+
+---
 
 # Project Workflow
 
 ### Step 1
 
-Designed and created a custom restaurant dataset using **Python (Pandas)** to simulate real-world business operations.
+Designed and generated a custom restaurant dataset using **Python (Pandas)** to simulate real-world restaurant operations.
 
-The dataset includes realistic information for:
+The dataset includes:
 
 - Customers
+- Products
 - Stores
 - Employees
-- Products
 - Orders
 - Order Items
-## 🐍 Python Dataset Generation
-
-The Python scripts used to generate the QuickBite dataset are available in the **Python** folder.
-
-- [generate_Customers.py](04_Python/generate_Customers.py)
-- [generate_employees.py](04_Python/generate_employees.py)
-- [genrate_orders.py](04_Python/genrate_orders.py)
-- [generate_orderitems.py](04_Python/generate_orderitems.py)
-- [Update_order_totals.py](04_Python/Update_order_totals.py)
 
 Python was used to:
 
 - Generate synthetic business data
-- Define relationships between entities
-- Create realistic records for restaurant operations
-- Export the datasets as CSV files for SQL Server import
+- Create realistic customer and sales records
+- Simulate restaurant transactions
+- Export datasets for SQL Server
+
+## 🐍 Python Dataset Generation
+
+The Python source code is available in the **04_Python** folder.
+
+- [generate_Customers.py](04_Python/generate_Customers.py)
+- [generate_employees.py](04_Python/generate_employees.py)
+- [generate_orders.py](04_Python/generate_orders.py)
+- [generate_orderitems.py](04_Python/generate_orderitems.py)
+- [Update_order_totals.py](04_Python/Update_order_totals.py)
+
+---
 
 ### Step 2
 
@@ -81,7 +82,7 @@ Created a SQL Server database named **QuickBite**.
 
 ### Step 3
 
-Imported CSV datasets into SQL Server.
+Imported the generated datasets into SQL Server.
 
 The following tables were created:
 
@@ -96,45 +97,46 @@ The following tables were created:
 
 ### Step 4
 
-Defined appropriate data types for each column.
+Defined appropriate data types for each table.
 
-Examples:
+Examples include:
 
-- nvarchar
-- int
-- float
-- datetime2
-- date
-- tinyint
+- NVARCHAR
+- INT
+- FLOAT
+- DATE
+- DATETIME2
+- TINYINT
 
 ---
 
 ### Step 5
 
-Verified data quality.
+Performed data validation.
 
-- Checked row counts
-- Validated primary keys
-- Removed datatype issues
-- Corrected Quantity datatype
+- Verified row counts
+- Checked Primary Keys
+- Validated Foreign Keys
+- Corrected data types
+- Removed inconsistencies
 
 ---
 
 ### Step 6
 
-Created SQL queries for business analysis.
+Created SQL queries to answer business questions.
 
-Some examples include:
+Examples include:
 
 - Total Revenue
 - Total Orders
 - Total Customers
 - Revenue by Store
 - Revenue by Product
-- Top Selling Products
+- Revenue by Category
 - Monthly Revenue Trend
-- Category Performance
-- Customer Analysis
+- Top Customers
+- Product Performance
 
 ---
 
@@ -153,22 +155,19 @@ Relationships include:
 - Customers → Orders
 - Stores → Orders
 - Employees → Orders
-- Products → OrderItems
 - Orders → OrderItems
+- Products → OrderItems
 
-A star schema model was used for reporting.
+A star schema model was implemented for reporting.
 
 ---
 
 ### Step 9
 
+Created DAX measures for dashboard analysis.
+
 <details>
 <summary>📊 View DAX Measures</summary>
-
-
-Created DAX Measures.
-
-Examples include:
 
 ```DAX
 Total Revenue =
@@ -194,51 +193,53 @@ SUM(OrderItems[Quantity])
 Average Order Value =
 DIVIDE([Total Revenue],[Total Orders])
 ```
+
 </details>
-  
-Additional measures were created for:
+
+Additional measures include:
 
 - Product Revenue
 - Average Selling Price
+- Loyalty Members
 - Loyalty Percentage
-- Store Revenue
 - Customer Revenue
+- Store Revenue
 
 ---
 
 ### Step 10
 
-Built four interactive dashboards.
+Built four interactive dashboards in Power BI.
 
-Snap of Executive Dashboard,
+# Dashboard Snapshots
 
-# Executive Dashboard
+## Executive Dashboard
 
 ![Executive Dashboard](Executive_Dashboard.png)
 
-Snap of Product Analysis Dashboard,
+---
 
-# Product Analysis Dashboard
+## Product Analysis Dashboard
 
-![Product_Analysis_Dashboard](Product_Analysis.png)
+![Product Analysis](Product_Analysis.png)
 
-Snap of Store Performance Dashboard,
+---
 
-# Store Performance Dashboard
+## Store Performance Dashboard
 
-![Store_Performance_Dashboard](Store_Performance.png)
+![Store Performance](Store_Performance.png)
 
-Snap of Customer Analysis Dashboard,
+---
 
-# Customer Analysis Dashboard
+## Customer Analysis Dashboard
 
-![Customer_Analysis_Dashboard](Customer_Analysis.png)
+![Customer Analysis](Customer_Analysis.png)
 
-
+---
 
 # Dashboard Pages
 
-## 1️⃣ Executive Dashboard
+## Executive Dashboard
 
 KPIs
 
@@ -254,14 +255,9 @@ Visualizations
 - Revenue by Store
 - Revenue by Category
 
-Slicers
-
-- Store
-- Order Date
-
 ---
 
-## 2️⃣ Product Analysis Dashboard
+## Product Analysis Dashboard
 
 KPIs
 
@@ -271,19 +267,14 @@ KPIs
 
 Visualizations
 
-- Top 10 Products by Revenue
+- Top Products by Revenue
 - Revenue by Category
-- Products Sold by Category
 - Product Revenue Treemap
-
-Slicers
-
-- Category
-- Product Name
+- Products Sold by Category
 
 ---
 
-## 3️⃣ Store Performance Dashboard
+## Store Performance Dashboard
 
 KPIs
 
@@ -299,14 +290,9 @@ Visualizations
 - Monthly Revenue Trend
 - Revenue Share by Store
 
-Slicers
-
-- Store
-- Order Date
-
 ---
 
-## 4️⃣ Customer Analysis Dashboard
+## Customer Analysis Dashboard
 
 KPIs
 
@@ -318,28 +304,89 @@ KPIs
 Visualizations
 
 - Top Customers
-- Customers by City
-- Gender Distribution
-- Customer Registration Trend
+- Customer Distribution
 - Revenue by Loyalty Status
+- Registration Trend
 
-Slicers
+---
 
-- City
-- Gender
+# Business Insights
 
+## [1] Executive Dashboard
+
+- **Total Revenue:** €XXX,XXX
+- **Total Orders:** XXX
+- **Total Customers:** XXX
+- **Total Products Sold:** XXX
+- **Average Order Value:** €XX.XX
+
+**Insight**
+
+The Executive Dashboard provides a high-level overview of restaurant performance, allowing management to monitor revenue, customer activity, sales volume, and purchasing trends.
+
+---
+
+## [2] Product Analysis Dashboard
+
+- Highest Revenue Category: **________**
+- Best Selling Product: **________**
+- Top 10 products contribute the highest percentage of overall revenue.
+- Revenue distribution across product categories helps identify profitable menu items.
+
+**Insight**
+
+The dashboard enables management to optimize menu offerings by identifying high-performing and low-performing products.
+
+---
+
+## [3] Store Performance Dashboard
+
+- Best Performing Store: **________**
+- Highest Store Revenue: **€________**
+- Monthly revenue trends identify peak sales periods.
+- Store contribution to overall revenue is visualized through charts.
+
+**Insight**
+
+The dashboard helps compare operational performance across all restaurant locations.
+
+---
+
+## [4] Customer Analysis Dashboard
+
+- Total Customers: **XXX**
+- Loyalty Members: **XX%**
+- Top Customers identified based on revenue.
+- Customer distribution analyzed by city and gender.
+- Registration trends show customer growth over time.
+
+**Insight**
+
+Customer analytics help evaluate loyalty programs and identify valuable customer segments.
+
+---
 
 # Skills Demonstrated
+
+## Python
+
+- Pandas
+- Faker
+- Synthetic Data Generation
+- Data Validation
+- Data Export
+
+---
 
 ## SQL
 
 - Database Design
-- Primary & Foreign Keys
+- Primary Keys
+- Foreign Keys
 - Joins
-- Aggregations
 - GROUP BY
 - ORDER BY
-- CASE Statements
+- Aggregate Functions
 - Business Queries
 
 ---
@@ -347,12 +394,10 @@ Slicers
 ## Power BI
 
 - Data Modeling
-- Relationships
 - Interactive Dashboards
-- Drill-down Analysis
+- Relationships
 - Slicers
-- Cross Filtering
-- Themes
+- Drill-down Analysis
 - Report Navigation
 
 ---
@@ -364,28 +409,26 @@ Slicers
 - DISTINCTCOUNT
 - SUMX
 - DIVIDE
-- AVERAGE
 - CALCULATE
 - RELATED
+- AVERAGE
 
 ---
 
-# Business Insights
+# Key Business Findings
 
-The dashboards enable restaurant management to:
+- Identified the highest revenue-generating product category.
+- Compared revenue across all restaurant locations.
+- Identified top customers based on spending.
+- Evaluated customer loyalty participation.
+- Analyzed monthly sales trends.
+- Compared store performance using interactive dashboards.
+- Enabled dynamic filtering using slicers and cross-filtering.
 
-- Monitor overall sales performance.
-- Identify high-performing products.
-- Compare store performance.
-- Track customer loyalty.
-- Analyze purchasing trends.
-- Understand category-wise revenue contribution.
-- Identify top revenue-generating customers.
-
+---
 
 # Conclusion
 
-This project demonstrates an end-to-end Business Intelligence solution, beginning with data cleaning and preparation in **Python (Pandas)**, followed by database design and querying in **SQL Server**, and concluding with interactive dashboard development in **Power BI** using **DAX**.
+This project demonstrates a complete Business Intelligence workflow, beginning with **custom dataset generation using Python (Pandas)**, followed by **SQL Server database design and querying**, and culminating in **interactive Power BI dashboards using DAX**.
 
-The project highlights practical experience in **Python, Pandas, SQL, ETL, data modeling, DAX, data visualization, and business intelligence**, showcasing the complete analytics workflow expected of a Data Analyst.
-
+The project showcases practical experience in **Python, Pandas, SQL, ETL, data modeling, DAX, data visualization, dashboard design, and business intelligence**, making it a strong portfolio project for Data Analyst roles.
