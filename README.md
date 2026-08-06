@@ -140,7 +140,7 @@ Examples include:
 
 ## 📂 SQL Scripts
 
- - [02_Analysis.sql](03_SQL/02_Analysis.sql)
+ - [Business_Queries.sql](03_SQL/Business_Queries.sql)
 
 ---
 
