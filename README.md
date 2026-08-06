@@ -193,7 +193,7 @@ SUM(OrderItems[Quantity])
 Average Order Value =
 DIVIDE([Total Revenue],[Total Orders])
 ```
-<details>
+</details>
   
 Additional measures were created for:
 
