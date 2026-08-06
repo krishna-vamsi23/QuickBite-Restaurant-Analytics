@@ -312,58 +312,166 @@ Visualizations
 
 # Business Insights
 
+The QuickBite Restaurant Analytics Dashboard provides valuable insights into restaurant operations, enabling management to make data-driven decisions.
+
+Following insights can be drawn from the dashboard:
+
+---
+
 ## [1] Executive Dashboard
 
-- **Total Revenue:** €XXX,XXX
-- **Total Orders:** XXX
-- **Total Customers:** XXX
-- **Total Products Sold:** XXX
-- **Average Order Value:** €XX.XX
+### Sales Performance
+
+- **Total Revenue:** **€3.31 Million**
+- **Total Orders:** **100K**
+- **Total Customers:** **5K**
+- **Total Products Sold:** **603K**
+- **Average Order Value:** **€33.12**
+
+### Revenue Trend
+
+- Monthly revenue ranges from **€254K** to **€286K**.
+- **December** recorded the highest monthly revenue (**€286K**).
+- **February** recorded the lowest monthly revenue (**€254K**).
+- Revenue remained relatively stable throughout the year with only minor fluctuations.
+
+### Revenue by Category
+
+Category-wise contribution to total revenue:
+
+| Category | Revenue | Share |
+|----------|---------:|------:|
+| Burger | €1.10M | 33.25% |
+| Drinks | €0.61M | 18.34% |
+| Sides | €0.53M | 15.97% |
+| Combo | €0.48M | 14.57% |
+| Desserts | €0.20M | 6.09% |
+| Breakfast | €0.20M | 5.94% |
 
 **Insight**
 
-The Executive Dashboard provides a high-level overview of restaurant performance, allowing management to monitor revenue, customer activity, sales volume, and purchasing trends.
+Burgers generated the highest revenue, contributing approximately one-third of total restaurant sales.
 
 ---
 
 ## [2] Product Analysis Dashboard
 
-- Highest Revenue Category: **________**
-- Best Selling Product: **________**
-- Top 10 products contribute the highest percentage of overall revenue.
-- Revenue distribution across product categories helps identify profitable menu items.
+### Overall Product Performance
+
+- **Product Revenue:** **€3.31 Million**
+- **Products Sold:** **603K**
+- **Average Selling Price:** **€5.50**
+
+### Top Revenue Generating Products
+
+| Product | Revenue |
+|---------|---------:|
+| Family Combo | €302.67K |
+| Burger Combo Meal | €179.74K |
+| Double Chicken Burger | €136.50K |
+| BBQ Burger | €122.11K |
+| Double Cheeseburger | €119.26K |
+| Spicy Chicken Burger | €113.14K |
+| Chicken Wings | €108.67K |
+| Fish Burger | €108.43K |
+
+### Products Sold by Category
+
+- Drinks – **180K**
+- Burgers – **150K**
+- Sides – **110K**
+- Desserts – **60K**
+- Breakfast – **50K**
+- Kids Meal – **30K**
+- Combo – **30K**
 
 **Insight**
 
-The dashboard enables management to optimize menu offerings by identifying high-performing and low-performing products.
+Family Combo is the highest revenue-generating product, while Drinks represent the highest-selling product category.
 
 ---
 
 ## [3] Store Performance Dashboard
 
-- Best Performing Store: **________**
-- Highest Store Revenue: **€________**
-- Monthly revenue trends identify peak sales periods.
-- Store contribution to overall revenue is visualized through charts.
+### Overall Store Performance
+
+- **Store Revenue:** **€3.31 Million**
+- **Store Orders:** **100K**
+- **Store Customers:** **5K**
+- **Store Employees:** **150**
+
+### Top Performing Stores
+
+| Store | Revenue |
+|--------|---------:|
+| QuickBite Frankfurt | €0.34M |
+| QuickBite Munich | €0.34M |
+| QuickBite Dresden | €0.33M |
+| QuickBite Hamburg | €0.33M |
+| QuickBite Düsseldorf | €0.33M |
+
+### Orders by Store
+
+Each restaurant processed approximately **10K orders**, demonstrating a balanced workload across locations.
+
+### Revenue Distribution
+
+Revenue is evenly distributed among all stores, with each location contributing roughly **10%** of total revenue.
 
 **Insight**
 
-The dashboard helps compare operational performance across all restaurant locations.
+Store performance is highly consistent across all locations, indicating balanced business operations and customer demand.
 
 ---
 
 ## [4] Customer Analysis Dashboard
 
-- Total Customers: **XXX**
-- Loyalty Members: **XX%**
-- Top Customers identified based on revenue.
-- Customer distribution analyzed by city and gender.
-- Registration trends show customer growth over time.
+### Customer Overview
+
+- **Total Customers:** **5K**
+- **Loyalty Members:** **2K**
+- **Loyalty Percentage:** **39%**
+- **Customer Revenue:** **€3.31 Million**
+
+### Top Customers
+
+| Customer | Revenue |
+|----------|---------:|
+| Frank-Peter | €7.4K |
+| Henny | €6.1K |
+| Susan | €6.1K |
+| Klaus-Dieter | €5.8K |
+| Enrico | €5.8K |
+
+### Gender Distribution
+
+- Female Customers: **50.34%**
+- Male Customers: **49.66%**
+
+The customer base is almost equally distributed between male and female customers.
+
+### Customer Registration Trend
+
+Monthly customer registrations vary between **382** and **455** new customers, showing a steady customer acquisition trend throughout the year.
 
 **Insight**
 
-Customer analytics help evaluate loyalty programs and identify valuable customer segments.
+Approximately **39%** of customers are enrolled in the loyalty program, providing opportunities to improve customer retention through targeted marketing and loyalty campaigns.
 
+---
+
+# Overall Business Findings
+
+- The restaurant generated **€3.31 Million** in total revenue from **100K** orders.
+- Burgers are the highest revenue-generating product category.
+- Family Combo is the best-performing product based on revenue.
+- Drinks represent the highest-selling product category by quantity sold.
+- Revenue is evenly distributed across all restaurant locations.
+- All stores processed approximately **10K** orders, indicating balanced operational performance.
+- Customer distribution is nearly equal between male and female customers.
+- Nearly **40%** of customers participate in the loyalty program.
+- Monthly revenue remained stable throughout the year, with December being the highest-performing month.
+- Interactive Power BI dashboards enable dynamic filtering by Store, Product Category, Customer, Gender, City, and Order Date for detailed business analysis.
 ---
 
 # Skills Demonstrated
