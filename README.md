@@ -215,7 +215,7 @@ Built four interactive dashboards in Power BI.
 
 ## Executive Dashboard
 
-![Executive Dashboard](Executive_Dashboard.png)
+![Executive Dashboard](Screenshots/Executive_Dashboard.png)
 
 ---
 
