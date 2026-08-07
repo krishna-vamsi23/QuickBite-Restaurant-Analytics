@@ -541,6 +541,5 @@ Approximately **39%** of customers are enrolled in the loyalty program, providin
 
 # Conclusion
 
-This project demonstrates a complete Business Intelligence workflow, beginning with **custom dataset generation using Python (Pandas)**, followed by **SQL Server database design and querying**, and culminating in **interactive Power BI dashboards using DAX**.
+This project demonstrates a complete Business Intelligence workflow, beginning with **custom dataset generation using Python (Pandas)**, followed by **SQL Server database design and querying**, and creating **interactive Power BI dashboards using DAX**.
 
-The project showcases practical experience in **Python, Pandas, SQL, ETL, data modeling, DAX, data visualization, dashboard design, and business intelligence**, making it a strong portfolio project for Data Analyst roles.
